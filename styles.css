@@ -200,6 +200,7 @@ section { margin-top: 48px; }
   justify-content: space-between;
   align-items: center;
   gap: 10px;
+  flex-wrap: wrap;
 }
 .contact-card {
   display: flex;
@@ -329,4 +330,20 @@ footer {
 @media (max-width: 900px) {
   .project-card { grid-template-columns: 1fr; }
   nav { flex-direction: column; align-items: flex-start; gap: 10px; }
+}
+
+@media (max-width: 540px) {
+  .card-flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .pill-whatsapp,
+  .pill-info {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+  .heading-inline {
+    flex-wrap: wrap;
+  }
 }
