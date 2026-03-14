@@ -89,7 +89,7 @@
       <h3 class="section-title">Experiencia</h3>
       <div class="grid">
         <div class="card">
-          <div class="pill">Desarrollador Full Stack · actasTI</div>
+          <div class="pill">Desarrollador Full Stack · ActasTI</div>
           <ul class="list">
             <li>Frontend Angular 21 + Material, RxJS y Chart.js/ng2-charts para dashboards, KPIs y flujos guiados de creación/aprobación de actas.</li>
             <li>Módulos clave: login con AuthGuard/interceptor Bearer, generación/descarga de PDF, inventario filtrable con exportación CSV y reactivación vía token.</li>
@@ -187,7 +187,7 @@
       <div class="card project-card">
         <div>
           <div class="pill pill-warning mb-10">En desarrollo</div>
-          <h2 class="heading-alt mt-6 mb-8">actasTI</h2>
+          <h2 class="heading-alt mt-6 mb-8">ActasTI</h2>
           <p class="subtitle">Aplicación Angular para gestión de actas TI: creación de asignaciones, aprobación por enlace/token, consulta histórica, dashboard de indicadores e inventario filtrable para equipos que necesitan trazabilidad y acceso rápido a decisiones.</p>
           <ul class="list">
             <li>Registro estructurado de actas, acuerdos y responsables.</li>
@@ -196,7 +196,7 @@
             <li>Backend Node/Express + PostgreSQL con JWT, PDFKit y notificaciones vía email.</li>
           </ul>
           <div class="cta-row cta-row--tight">
-            <a class="btn btn-primary" href="#contacto">Solicitar demo</a>
+            <button class="btn btn-primary" type="button" id="open-demo">Solicitar demo</button>
             <a class="btn" href="https://github.com/MigueMiranda/ActasTI" target="_blank" rel="noopener">Repositorio en GitHub</a>
           </div>
         </div>
@@ -225,6 +225,17 @@
   <footer>
     Hecho por Miguel Miranda · 2026
   </footer>
+  <div class="modal-overlay" id="demo-modal" role="dialog" aria-modal="true" aria-labelledby="demo-title" aria-describedby="demo-desc">
+    <div class="modal">
+      <h3 id="demo-title">¿Cómo quieres solicitar la demo?</h3>
+      <p id="demo-desc">Elige el canal y te redirigiré con un mensaje prellenado.</p>
+      <div class="modal-actions">
+        <a class="btn btn-primary" id="demo-mail" href="mailto:miguemiranda89@gmail.com?subject=Demo%20actasTI&body=Hola%20Miguel,%20quiero%20probar%20actasTI.%20%C2%BFCoordinamos%20una%20demo%3F">Por correo</a>
+        <a class="btn" id="demo-wa" href="https://wa.me/573102168332?text=Hola%20Miguel,%20quiero%20probar%20actasTI.%20%C2%BFCoordinamos%20una%20demo%3F">Por WhatsApp</a>
+      </div>
+      <button class="modal-close" type="button" id="demo-close">Cancelar</button>
+    </div>
+  </div>
   <script>
     // Abre enlaces externos en nueva pestaña para mantener el portafolio visible
     document.querySelectorAll('a[href]').forEach((link) => {
@@ -235,6 +246,30 @@
         link.target = '_blank';
         link.rel = 'noopener noreferrer';
       }
+    });
+
+    // Modal demo
+    const demoBtn = document.getElementById('open-demo');
+    const modal = document.getElementById('demo-modal');
+    const closeBtn = document.getElementById('demo-close');
+    const traps = [document.getElementById('demo-mail'), document.getElementById('demo-wa'), closeBtn];
+
+    const openModal = () => {
+      modal.classList.add('is-visible');
+      traps[0].focus();
+    };
+    const closeModal = () => {
+      modal.classList.remove('is-visible');
+      demoBtn.focus();
+    };
+
+    demoBtn?.addEventListener('click', openModal);
+    closeBtn?.addEventListener('click', closeModal);
+    modal?.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('is-visible')) closeModal();
     });
   </script>
 </body>

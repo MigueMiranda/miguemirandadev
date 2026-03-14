@@ -146,6 +146,9 @@ h1 {
   text-decoration: none;
   font-weight: 600;
   transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+  appearance: none;
+  -webkit-appearance: none;
 }
 .btn-primary {
   background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
@@ -325,6 +328,53 @@ footer {
   text-align: center;
   color: var(--muted);
   font-size: 14px;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease;
+  z-index: 999;
+}
+.modal-overlay.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal {
+  width: min(420px, 90vw);
+  background: #0f1a30;
+  border: 1px solid var(--stroke);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 20px 22px;
+}
+.modal h3 {
+  margin: 0 0 6px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+.modal p {
+  margin: 0 0 12px;
+  color: var(--muted);
+}
+.modal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+.modal-close {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  font-weight: 600;
+  padding: 8px 0;
 }
 
 @media (max-width: 900px) {
