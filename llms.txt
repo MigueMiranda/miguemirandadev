@@ -1,0 +1,19 @@
+# Miguel Miranda
+
+> Portafolio profesional de Miguel Miranda Manjarres, ingeniero de sistemas en Colombia con experiencia en operaciones TI, soporte y desarrollo full stack.
+
+## Perfil
+
+Ingeniero de Sistemas en formación y Técnico Profesional en Ingeniería de Sistemas. Cuenta con más de 13 años de experiencia en Homecenter Colombia, enfocado en soporte, continuidad operativa de servicios TI, gestión de incidentes críticos y cambios tecnológicos.
+
+## Experiencia y proyectos
+
+- ActasTI: plataforma de gestión y trazabilidad de actas tecnológicas e inventarios, desarrollada con Angular, Node.js, Express y PostgreSQL.
+- Amorestore: interfaces y componentes para comercio electrónico con Angular y TypeScript.
+- Operaciones TI: administración de entornos Microsoft, Linux, Windows, SQL Server y Oracle; gestión de incidentes, SLAs e ITIL.
+
+## Enlaces
+
+- [Portafolio](https://miguemirandadev.vercel.app/)
+- [GitHub](https://github.com/MigueMiranda)
+- [Currículum](https://miguemirandadev.vercel.app/public/HV-MiguelMiranda.pdf)

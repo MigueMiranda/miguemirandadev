@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://miguemirandadev.vercel.app/sitemap.xml
